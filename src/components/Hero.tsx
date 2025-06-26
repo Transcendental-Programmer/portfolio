@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Download, Code, Trophy, GitPullRequest } from 'lucide-react';
+import developerImg from '../assets/developer.png';
 
 const Hero: React.FC = () => {
   const [stats, setStats] = useState({
@@ -59,8 +60,8 @@ const Hero: React.FC = () => {
           <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 p-1">
             <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center">
               <img
-                src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt="Profile"
+                src={developerImg}
+                alt="Developer"
                 className="w-28 h-28 rounded-full object-cover"
               />
             </div>

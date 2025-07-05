@@ -74,7 +74,7 @@ const About: React.FC = () => {
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed">
                   My journey includes significant contributions to open-source projects like GFPOP and 
-                  PeakSegOptimal, software engineering internship at Jaffa.ai, and a track record of 
+                  PeakSegOptimal with 15+ merged PRs, software engineering internship at Jaffa.ai, and a track record of 
                   excellence in competitive programming with Institute Rank 5 in ICPC 2024-25 and 5-Star 
                   rating on CodeChef.
                 </p>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Github, GitPullRequest, Code, Users, Star, GitFork } from 'lucide-react';
+import { Github, GitPullRequest, Code, Users, GitFork } from 'lucide-react';
 
 const OpenSource: React.FC = () => {
   const [ref, inView] = useInView({
@@ -25,9 +25,8 @@ const OpenSource: React.FC = () => {
         prs: 4,
         commits: 35,
         linesChanged: '2.1k',
-        stars: 45
       },
-      link: 'https://github.com/vrunge/gfpop',
+      link: 'https://drive.google.com/file/d/1YUoI0X_uFBqsZ0J42OHkwVD6bT_8Qmck/view',
       color: 'from-blue-500 to-cyan-500',
     },
     {
@@ -45,9 +44,8 @@ const OpenSource: React.FC = () => {
         prs: 2,
         commits: 8,
         linesChanged: '350+',
-        stars: 1200
       },
-      link: 'https://github.com/kcl-lang/kcl',
+      link: 'https://drive.google.com/file/d/1YUoI0X_uFBqsZ0J42OHkwVD6bT_8Qmck/view',
       color: 'from-green-500 to-emerald-500',
     },
     {
@@ -62,18 +60,17 @@ const OpenSource: React.FC = () => {
       ],
       technologies: ['Python', 'Kubernetes', 'NetworkPolicies', 'Chaos Engineering'],
       stats: {
-        prs: 3,
+        prs: 11,
         commits: 15,
-        linesChanged: '800+',
-        stars: 890
+        linesChanged: '4k+',
       },
-      link: 'https://github.com/krkn-chaos/krkn',
+      link: 'https://drive.google.com/file/d/1YUoI0X_uFBqsZ0J42OHkwVD6bT_8Qmck/view',
       color: 'from-purple-500 to-pink-500',
     },
   ];
 
   const overallStats = [
-    { label: 'Total PRs', value: '9', icon: GitPullRequest, color: 'text-green-400' },
+    { label: 'Total PRs', value: '15+', icon: GitPullRequest, color: 'text-green-400' },
     { label: 'Commits', value: '58+', icon: Code, color: 'text-blue-400' },
     { label: 'Projects', value: '3', icon: Github, color: 'text-purple-400' },
     { label: 'Technologies', value: '12+', icon: Users, color: 'text-orange-400' },
@@ -182,7 +179,6 @@ const OpenSource: React.FC = () => {
                     { label: 'Pull Requests', value: contrib.stats.prs, icon: GitPullRequest },
                     { label: 'Commits', value: contrib.stats.commits, icon: Code },
                     { label: 'Lines Changed', value: contrib.stats.linesChanged, icon: GitFork },
-                    { label: 'Stars Earned', value: contrib.stats.stars, icon: Star },
                   ].map((stat) => (
                     <div key={stat.label} className="flex items-center justify-between p-3 bg-gray-700/50 rounded-lg">
                       <div className="flex items-center space-x-2">

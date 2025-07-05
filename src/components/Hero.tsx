@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Download, Code, Trophy, GitPullRequest } from 'lucide-react';
-import developerImg from '../assets/developer.png';
+import { Github, Linkedin, Mail, Download, Code, GitPullRequest } from 'lucide-react';
+import developerImg from '../assets/developer.jpg';
+import resumePDF from '../assets/Priyansh_Saxena_IIITM_Gwalior_resume_full_stack_ML (4).pdf';
 
 const Hero: React.FC = () => {
   const [stats, setStats] = useState({
     githubContributions: 0,
     problemsSolved: 0,
-    prsMerged: 0,
   });
+
+  const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = resumePDF;
+    link.download = 'Priyansh_Saxena_Resume.pdf';
+    link.click();
+  };
 
   useEffect(() => {
     // Simulate fetching live stats
@@ -18,7 +25,6 @@ const Hero: React.FC = () => {
         setStats({
           githubContributions: 230,
           problemsSolved: 973,
-          prsMerged: 8,
         });
       }, 1000);
     };
@@ -96,6 +102,7 @@ const Hero: React.FC = () => {
             className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-full font-semibold flex items-center space-x-2 hover:shadow-lg hover:shadow-blue-500/25 transition-all"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={downloadResume}
           >
             <Download className="h-5 w-5" />
             <span>Download Resume</span>
@@ -154,9 +161,9 @@ const Hero: React.FC = () => {
             },
             {
               icon: GitPullRequest,
-              value: stats.prsMerged,
-              label: 'Open Source Projects',
-              suffix: ' contributed to',
+              value: 15,
+              label: 'Open Source PRs',
+              suffix: ' merged',
               color: 'from-purple-400 to-purple-600',
             },
           ].map(({ icon: Icon, value, label, suffix, color }) => (

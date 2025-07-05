@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Briefcase, Calendar, MapPin, ExternalLink } from 'lucide-react';
+import { Briefcase, Calendar, MapPin } from 'lucide-react';
 
 const Experience: React.FC = () => {
   const [ref, inView] = useInView({
@@ -10,6 +10,20 @@ const Experience: React.FC = () => {
   });
 
   const experiences = [
+    {
+      title: 'Machine Learning Engineer',
+      company: 'Teeny Tech Track',
+      location: 'Remote',
+      period: 'May 2025 - Jun 2025',
+      type: 'Internship',
+      description: [
+        'Engineered Persona RAG framework leveraging GPT-4.1 and FAISS to deliver sub-200ms personalized responses, and scaled to process 1K+ daily interactions with 99.9% uptime via GCP Kubernetes and GitHub Actions CI/CD',
+        'Packaged microservices in Docker with Kubernetes orchestration, reducing deployment friction and release cycles by 60%',
+        'Developed Question Generation using T5 and PyTorch, achieving <300ms inference latency with 85% BLEU and 88% ROUGE'
+      ],
+      technologies: ['GPT-4.1', 'FAISS', 'GCP', 'Kubernetes', 'Docker', 'T5', 'PyTorch', 'GitHub Actions'],
+      color: 'from-emerald-500 to-teal-500',
+    },
     {
       title: 'Open Source Contributions',
       company: 'GFPOP & PeakSegOptimal Projects',

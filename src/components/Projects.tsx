@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Github, ExternalLink, Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
+import llmExcelImg from '../assets/llm_excel.png';
+import fedModelImg from '../assets/fed_model.png';
 
 const Projects: React.FC = () => {
   const [ref, inView] = useInView({
@@ -24,7 +26,7 @@ const Projects: React.FC = () => {
       title: 'Privacy-Preserving Financial Data Generation System',
       description: 'Federated learning framework with RAG integration for GDPR-compliant financial data analysis',
       longDescription: 'Architected a federated learning framework with RAG integration using TensorFlow Federated and Hugging Face Transformers, achieving 92% statistical similarity with original data while maintaining GDPR compliance. Devised a Docker/Kubernetes based scalable deployment that supported 500+ concurrent training sessions with 99.9% uptime.',
-      image: 'https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: fedModelImg,
       technologies: ['TensorFlow Federated', 'Hugging Face Transformers', 'Docker', 'Kubernetes', 'GitLab CI/CD'],
       timeline: 'Aug 2024 - Dec 2024',
       highlights: [
@@ -60,7 +62,7 @@ const Projects: React.FC = () => {
       title: 'LLM Integrated Excel Plotter Chatbot',
       description: 'AI-powered Excel tool with BART and CLIP integration for intelligent chart generation',
       longDescription: 'Fine-tuned a BART model (PyTorch, Transformers) achieving 90% query interpretation accuracy and CLIP model verification with 95% precision in chart validation. Created an innovative solution that allows users to generate complex visualizations using natural language commands.',
-      image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: llmExcelImg,
       technologies: ['PyTorch', 'Transformers', 'BART', 'CLIP', 'React', 'Node.js'],
       timeline: 'Mar 2024 - Apr 2024',
       highlights: [
@@ -73,24 +75,6 @@ const Projects: React.FC = () => {
       liveUrl: 'https://llm-integrated-excel-plotter-app.vercel.app/',
       category: 'Web Development',
       color: 'from-orange-500 to-red-600',
-    },
-    {
-      title: 'Financial Data Processing and Analysis Suite',
-      description: 'Comprehensive suite for financial data extraction, processing, and intelligent insights generation',
-      longDescription: 'Built a comprehensive collection of tools for financial data extraction, processing, analysis, and presentation. Includes Graph RAG with Neo4j, XBRL parsing, annual report processing, and financial analysis agents with natural language insights generation.',
-      image: 'https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Neo4j', 'LangChain', 'Azure OpenAI', 'FastAPI', 'Python', 'XBRL'],
-      timeline: 'Ongoing',
-      highlights: [
-        'Graph RAG with entity resolution',
-        'XBRL document processing pipeline',
-        'Natural language financial insights',
-        'Multi-level retrieval strategies'
-      ],
-      githubUrl: '#',
-      liveUrl: '#',
-      category: 'Financial Technology',
-      color: 'from-purple-500 to-pink-600',
     },
   ];
 

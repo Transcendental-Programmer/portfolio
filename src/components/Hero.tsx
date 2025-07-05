@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Download, Code, GitPullRequest } from 'lucide-react';
-import developerImg from '../assets/developer.jpg';
+import developerImg from '../assets/developer.png';
 import resumePDF from '../assets/Priyansh_Saxena_IIITM_Gwalior_resume_full_stack_ML (4).pdf';
 
 const Hero: React.FC = () => {

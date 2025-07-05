@@ -33,8 +33,8 @@ const Projects: React.FC = () => {
         'Supported 500+ concurrent training sessions',
         '99.9% uptime with Docker/Kubernetes deployment'
       ],
-      githubUrl: '#',
-      liveUrl: '#',
+      githubUrl: 'https://github.com/Transcendental-Programmer/FinFedRAG-Financial-Federated-RAG',
+      liveUrl: 'https://huggingface.co/spaces/ArchCoder/federated-credit-scoring',
       category: 'Machine Learning',
       color: 'from-blue-500 to-purple-600',
     },
@@ -69,8 +69,8 @@ const Projects: React.FC = () => {
         'Natural language to visualization conversion',
         'Seamless Excel integration'
       ],
-      githubUrl: '#',
-      liveUrl: '#',
+      githubUrl: 'https://github.com/Transcendental-Programmer/LLM-Integrated-Excel-Plotter-App',
+      liveUrl: 'https://llm-integrated-excel-plotter-app.vercel.app/',
       category: 'Web Development',
       color: 'from-orange-500 to-red-600',
     },
